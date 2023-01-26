@@ -1,5 +1,5 @@
-const user = {
-    user1:{
+const user = [
+    {
         id: '1',
         chats: {
             chat1,
@@ -11,29 +11,28 @@ const user = {
         email:'r@test.ru',
         name:'Vasia'
     },
-    user2:{
+    {
         id: '2',
         chats: {
             chat1,
-            chat2,
-            chat3
+            chat2
         },
         avatar:'картинка2',
-        data:'22-01-2022',
-        email:'r2@test.ru',
-        name:'Petya'
+        data:'23-01-2022',
+        email:'r1@test.ru',
+        name:'Sasha'
     },
-    user3:{
+    {
         id: '3',
         chats: {
             chat1,
-            chat2,
             chat3
         },
         avatar:'картинка3',
-        data:'26-01-2022',
+        data:'22-01-2022',
         email:'r3@test.ru',
-        name:'Sasha'
+        name:'Valera'
     }
     
-}
+]
+   
