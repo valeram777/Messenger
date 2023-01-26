@@ -1,13 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
+//import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import {AllPages} from './Pages/Allpages'
-
+import {Allpages} from './Pages/Allpages'
+import * as React from 'react';
+//import uuid from "react-native-uuid"
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <AllPages />
-      <StatusBar style="auto" />
+      <Allpages /> 
     </View>
   );
 }
@@ -15,8 +14,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+ 
   },
 });
+/*<View style={styles.container}>
+      
+      <AllPages />
+      <StatusBar style="auto" />
+    </View>
+    */

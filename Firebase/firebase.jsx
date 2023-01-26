@@ -1,10 +1,7 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-import * as firebase from 'firebase';
-import "firebase/firestore";
-// Your web app's Firebase configuration
+//import firebase from "firebase";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 const firebaseConfig = {
   apiKey: "AIzaSyAMuzC8CS0JPrgI8yx9Yh6QhUQoAOBUSLI",
   authDomain: "clonewhatsapp-88218.firebaseapp.com",
@@ -14,7 +11,15 @@ const firebaseConfig = {
   appId: "1:65056409746:web:ae43e34818db68d9217e4b"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const fireDB = app.firestore();
-export default app
+let app;
+
+if (firebase.apps.length === 0) {
+  app = firebase.initializeApp(firebaseConfig)
+} else {
+  app = firebase.app();
+}
+
+const db = app.firestore();
+const auth = firebase.auth();
+
+export { db, auth };
